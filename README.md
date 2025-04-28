@@ -2,7 +2,7 @@
 
 A beautiful, colorful command-line implementation of the classic Tic-Tac-Toe game built with Node.js.
 
-![Tic Tac Toe](https://imgur.com/25PckaC)
+[Tic-Tac-Toe](https://imgur.com/25PckaC)
 
 ## Features
 
