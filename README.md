@@ -17,7 +17,7 @@ A beautiful, colorful command-line implementation of the classic Tic-Tac-Toe gam
 1. Make sure you have [Node.js](https://nodejs.org/) installed
 2. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/tic-tac-toe.git
+   git clone https://github.com/itsKrish01/tic-tac-toe.git
    cd tic-tac-toe
    ```
 3. Install dependencies:
@@ -29,7 +29,7 @@ A beautiful, colorful command-line implementation of the classic Tic-Tac-Toe gam
 
 1. Run the game:
    ```bash
-   node index.js
+   node .
    ```
 2. The game board is a 3x3 grid with coordinates (row, column):
 
