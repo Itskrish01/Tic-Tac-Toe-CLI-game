@@ -72,7 +72,7 @@ function displayBoard() {
           : cell === "O"
           ? chalk.red.bold(cell)
           : " ";
-      row += ` ${coloredCell} ║`;
+      row += chalk.cyan(` ${coloredCell} ║`);
     }
     console.log(row);
     if (i < 2) console.log(chalk.cyan("  ╠═══╬═══╬═══╣"));
