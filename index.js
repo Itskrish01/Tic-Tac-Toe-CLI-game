@@ -198,6 +198,14 @@ function promptMove() {
   );
 }
 
+function setupRawMode() {
+  if (process.stdin.isTTY) {
+    process.stdin.setRawMode(true);
+  }
+  process.stdin.resume();
+  process.stdin.setEncoding("utf8");
+}
+
 function startGame() {
   clearScreen();
   console.log(title);
@@ -211,10 +219,26 @@ function startGame() {
   console.log(chalk.white("3. Player X goes first, followed by Player O"));
   console.log(chalk.cyan("\nPress any key to start..."));
 
-  rl.question("", () => {
+  // Setup raw mode to capture any keypress
+  setupRawMode();
+
+  // Listen for any keypress event
+  const keyPressHandler = function (key) {
+    // Remove this listener to avoid duplicate handlers
+    process.stdin.removeListener("data", keyPressHandler);
+
+    // Return to normal mode
+    if (process.stdin.isTTY) {
+      process.stdin.setRawMode(false);
+    }
+
+    // Start the game
     displayBoard();
     promptMove();
-  });
+  };
+
+  // Add the keypress handler
+  process.stdin.on("data", keyPressHandler);
 }
 
 // Start the game
