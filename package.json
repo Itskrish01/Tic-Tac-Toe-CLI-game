@@ -1,0 +1,16 @@
+{
+  "name": "tic-tac-toe",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "A beautiful, colorful command-line implementation of the classic Tic-Tac-Toe game built with Node.js.",
+  "dependencies": {
+    "chalk": "^5.3.0"
+  }
+}

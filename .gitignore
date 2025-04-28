@@ -1,0 +1,25 @@
+# System-specific files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.log
+*.tmp
+*.bak
+
+# Build artifacts
+/bin/
+/obj/
+/dist/
+
+# Package manager directories
+/node_modules/
+/venv/
+
+# IDE configuration files
+.idea/
+.vscode/
+
+# Sensitive information
+.env
+secrets.txt
